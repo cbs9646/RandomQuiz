@@ -10,14 +10,20 @@
 <title>Code Quiz</title>
 </head>
 
+<header>
+    <h1 id="title">Random Question Quiz</h1>
+     
+
+
+</header>
 <body>
 <a href="index2.html">Highscores</a>
-<h1 class="timer" style="text-align:right;" h1>
-<main id="main">
 <button class="startButton">Start Quiz</button>
+ <div id="timer">Timer: </div>  
 
-<section id="questionContainer" class="hide">
-    <div id="question"></div>
+<main id="main">
+<section id="questionContainer" >
+    <p id="questions"></p>
     <ul id="answerChoices" class="answerChoicesLayout">
         <li>
             <button class="buttons" id="btn1"></button>
@@ -59,6 +65,7 @@
 
 
  <script src="./script.js"></script>
+
    
 </body>
 </html>

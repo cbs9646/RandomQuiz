@@ -1,31 +1,34 @@
-let timerEl = document.querySelector(".timer");
 let secondsLeft = 60;
-const btn = document.getElementsByClassName("button");
-btn.addEventListener('click', timerEl);
-
-
+let button = document.getElementById("#startButton"); 
+// Timer functionality
 
 function setTime(){
-
-let countdownTimer = setInterval(function() {
  
-   secondsLeft--;
+ let countdownTimer = setInterval(function() {
+    secondsLeft--;
+    button.addEventListener("click", setTime);
     timerEl.textContent = "Timer: " + secondsLeft;
-
- 
-
-    if(secondsLeft ===0) {
+    if(secondsLeft === 0) {
         clearInterval(countdownTimer);
     }
 
-    }, 1000);
+    }, 1000)
 
-    console.log(secondsLeft);
-}
+    
+       
+};
 
 setTime();
 
-// let questions = [
+// document.getElementById("questions").innerHTML = questionList[0]
+
+// Quiz Question and Answer array 
+
+// (function quizArray(){
+//     for(i=0; i<quizArray.questions.length; i++)
+//     this[i+1] = quizArray.questions[i];
+//    let questionList = [
+
 // {   question: "What element is denoted by the chemical symbol Sn in the periodic table?",
 //     answers: ["Tin", "Gold", "Silver", "Platinum"],
 //     correctAnswer: 0
@@ -43,14 +46,31 @@ setTime();
 //     correctAnswer: 1
 // },
 
-// console.log(questions)
+// ]});
+
+// let startingQuestion = [0];
+// let answers = [];
+// let questionGrid = getElementById("questionContainer");
 
 
-// ];
-
-// let startingQuestion = 0;
 
 
+// Populate Answers List
+// function answersList(index) {
+//     let
+
+// }
+
+
+
+
+
+
+
+
+// function nextQuestion(i) {
+
+// }
 
 
 
@@ -62,4 +82,15 @@ setTime();
 //     for (let i = 0; i < questions[i].answers.length; i++){
 //         const element = questions[i].answers[i];    
 //     }
+// }
+// Question 0 answers
+// } else if (
+//     (userChoice === "0" )     
+//   ) {
+//     wins++;
+    
+//   // If above conditions failed, assume player lost
+//   } else {
+//     losses++;
+    
 // }
